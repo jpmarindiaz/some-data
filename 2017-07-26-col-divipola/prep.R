@@ -19,7 +19,7 @@ muni <- divi %>%
 muniAlt <- read_csv("muni-alternativeNames.csv", col_types = cols(.default = 'c'))
 
 muni <- left_join(muni,muniAlt) %>% 
-select(code, name, alternativeNames, lat, lon, department, municipality, dept_code)
+select(id = code, name, alternativeNames, lat, lon, department, municipality, dept_code)
 
 write_csv(muni, "col-divipola-municipios-dane-2017-06-30.csv")
 
@@ -33,7 +33,7 @@ depto <- divi %>%
 
 deptoAlt <- read_csv("depto-alternativeNames.csv", col_types = cols(.default = 'c'))
 depto <- left_join(depto,deptoAlt) %>% 
-  select(code, name, alternativeNames, lat, lon)
+  select(id = code, name, alternativeNames, lat, lon)
   
 write_csv(depto,"col-divipola-deptos-dane-2017-06-30.csv")
 
