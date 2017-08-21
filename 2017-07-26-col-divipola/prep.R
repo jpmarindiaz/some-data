@@ -37,4 +37,3 @@ depto <- left_join(depto,deptoAlt) %>%
   
 write_csv(depto,"col-divipola-deptos-dane-2017-06-30.csv")
 
-
